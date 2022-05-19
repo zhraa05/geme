@@ -1,0 +1,200 @@
+
+
+*{
+    box-sizing: border-box;
+font-family: serif;
+text-transform: capitalize !important;
+}
+body{
+    background: rgb(18, 19, 55);
+    text-transform: capitalize !important;
+    transition: all 2s ease ;
+   
+text-transform: capitalize;
+}
+.select-box, .plzy-bord, .reslut-box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.select-box{
+
+    background: azure;
+    padding:20px 25px 25px ;
+    border-radius: 4px;
+    min-width: 330px;
+ 
+    /* width: 100%; */
+}
+.select-box.hid{
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0.9);
+}
+.select-box header{
+    font-size: 23px;
+    font-weight: 500;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
+@media(max-width:776px){
+    .select-box{
+        width: 80%;
+        /* height: 49.8%; */
+    }
+}
+.select-box .titl{
+    font-size: 18px;
+    font-weight: 500;
+    margin: 20px 0;
+}
+.select-box .option{
+    display: flex;
+    width: 100%;
+}
+.option .btn{
+   width: 100%;
+     padding: 8px 0;
+}
+.option button, .reslut-box .btn button {
+ 
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 20px;
+    border: none;
+    outline: none;
+    background-color :#ff0000;
+    margin: 1px;
+border-radius: 5px;
+color: azure;
+transition: all .3s ease;
+cursor: pointer;
+
+}
+
+.option button .playx{
+    margin-right: 4px;
+}
+.plzy-bord .detals{
+    display: flex;
+    padding: 4px;
+    margin: 2px;
+}
+.option button .playy{
+    margin-left: 4px;
+}
+button:hover{
+    transform: scale(0.96);
+}
+.plzy-bord .detals{
+    background: azure;
+    padding: 7px;
+    border-radius: 5px;
+    
+
+}
+.plzy-bord .detals .playars{
+    display: flex;width: 100%;
+    justify-content: space-between;
+    position: relative;
+}
+.plzy-bord{
+   opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0.9);
+}
+.plzy-bord.show{
+      opacity: 1;
+    pointer-events: auto ;
+    transform: translate(-50%, -50%) scale(1);
+}
+.plzy-bord .detals span{
+color: #121337;
+width: 100%;
+border-radius: 5px;
+padding: 7px 0;
+    font-size: 19px;
+    font-weight: 500;
+    cursor: default;
+    text-align: center;
+    position: relative;
+    z-index: 5;
+    transition: all 0.4s ease;
+}
+.playeroicon{
+    font-weight: bold;
+}
+.detals span:first-child{
+color: azure;
+}
+.playars.activ span:first-child{
+color: #121337;
+}
+.playars.activ span:nth-child(2){
+color: azure;
+}
+.playars.activ .slider{
+left: 50%;
+  transition: all 0.4s ease;
+}
+/* .plzy-bord .detals .activ{
+   color: azure;
+} */
+.detals .slider{
+    position: absolute;
+       background: #121337;
+       top: 0;left: 0;
+       height: 100%;width: 50%;
+       border-radius: 5px;
+       z-index: 2;
+}
+.plzy-bord section{
+    display: flex;
+}
+.plzy-bord section span{
+    display: block;
+   margin: 2px;
+    width: 80px;
+    height: 80px;
+    background: azure;
+    border-radius: 5px;
+    font-size: 40px;
+    text-align: center;
+    line-height: 80px;
+    color: #121337;
+}
+  .plzy-bord .play-eara{
+margin-top: 20px;
+}
+.reslut-box{
+    background-color: aliceblue;
+    padding: 20px;
+    border-radius: 5px;
+       min-width: 400px;
+    width: 50%;
+    /* display: block; */
+   opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0.9);
+}
+.reslut-box.show{
+      opacity: 1;
+    pointer-events: auto ;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.reslut-box .won-text{
+    font-size: 25px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+}
+.reslut-box.won-text span{
+    font-weight: bold;
+    margin: 0 5px;
+}
+.reslut-box .btn {
+    display: flex; margin-top: 18px;
+    justify-content: center;
+}
